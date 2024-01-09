@@ -1,4 +1,4 @@
-package br.com.product.api.repository;
+package br.com.product.api.service;
 
 import java.util.Optional;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.product.api.dto.ProductDto;
 import br.com.product.api.model.ProductModel;
+import br.com.product.api.repository.ProductRepository;
 import jakarta.transaction.Transactional;
 
 @Service
@@ -18,6 +19,7 @@ public class ProductService {
         this.repository = repository;
 
     }
+    
     @Transactional
     public Optional<ProductDto> save(ProductDto product) {
         ProductModel model = new ProductModel();
@@ -30,3 +32,4 @@ public class ProductService {
         return Optional.of(response);
     }
 }
+
