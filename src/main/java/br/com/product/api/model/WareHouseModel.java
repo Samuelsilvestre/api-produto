@@ -15,7 +15,7 @@ import lombok.Data;
 @Entity
 @Table
 @Data
-public class HareHouseModel {
+public class WareHouseModel {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
