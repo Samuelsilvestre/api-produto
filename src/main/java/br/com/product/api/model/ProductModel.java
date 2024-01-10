@@ -35,6 +35,6 @@ public class ProductModel {
     @Column(name = "status", nullable = false)
     private boolean status = true;
     
-    private LocalDateTime date = LocalDateTime.now(ZoneId.of("UTC"));
+    private LocalDateTime date;
     
 }
