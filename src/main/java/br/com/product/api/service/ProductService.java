@@ -52,6 +52,13 @@ public class ProductService {
 
         return response;
     }
+
+    public Optional<ProductDto> getOne(BigInteger id) {
+        ModelMapper mapper = new ModelMapper();
+        Optional<ProductModel> optional = repository.findById(id);
+        return optional.map(record -> mapper.map(record, ProductDto.class));
+        
+    }
 }
 
 
