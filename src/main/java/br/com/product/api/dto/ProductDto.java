@@ -1,6 +1,7 @@
 package br.com.product.api.dto;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -22,9 +23,11 @@ public class ProductDto {
     @Length(max = 100)
     private String description;
 
-    @NotBlank
-    @NotNull
     @Positive
     private BigDecimal price;
+
+    private boolean status;
+
+    private LocalDateTime date;
 
 }
